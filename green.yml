@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clothing-green
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app
+      version: green
+  template:
+    metadata:
+      labels:
+        app: app
+        version: green
+    spec:
+      containers:
+      - name: clothing
+        image: yekqpapp4q/product:v1
+        ports:
+        - containerPort: 80
+
+---
+
