@@ -50,7 +50,7 @@ metadata:
 spec:
   selector:
     app: app
-    version: blue
+    version: green
   ports:
   - port: 80
     targetPort: 80
